@@ -1,5 +1,6 @@
 # See docs/CMake.html for instructions about how to build LLVM with CMake.
-# add_compile_definitions(__LITTLE_ENDIAN__=1)
+
+SET(__LITTLE_ENDIAN__ 1)
 cmake_minimum_required(VERSION 3.4.3)
 
 if(POLICY CMP0022)
