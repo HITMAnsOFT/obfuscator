@@ -76,9 +76,9 @@ extern ManagedStatic<CryptoUtils> cryptoutils;
 
 #endif
 
-#if defined(__LITTLE_ENDIAN__) || defined(_LITTLE_ENDIAN)
+// #if defined(__LITTLE_ENDIAN__) || defined(_LITTLE_ENDIAN)
 #define ENDIAN_LITTLE
-#endif
+// #endif
 
 #if defined(__BIG_ENDIAN__) || defined(_BIG_ENDIAN)
 #define ENDIAN_BIG
