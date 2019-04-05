@@ -1,7 +1,7 @@
 # See docs/CMake.html for instructions about how to build LLVM with CMake.
 
 cmake_minimum_required(VERSION 3.4.3)
-add_compile_definitions(__LITTLE_ENDIAN__)
+
 if(POLICY CMP0068)
   cmake_policy(SET CMP0068 NEW)
   set(CMAKE_BUILD_WITH_INSTALL_NAME_DIR ON)
@@ -53,6 +53,16 @@ project(LLVM
 set(CMAKE_CXX_STANDARD 14 CACHE STRING "C++ standard to conform to")
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
 set(CMAKE_CXX_EXTENSIONS NO)
+
+include (TestBigEndian)
+TEST_BIG_ENDIAN(IS_BIG_ENDIAN)
+if(IS_BIG_ENDIAN)
+ message(STATUS "BIG_ENDIAN")
+ add_compile_definitions(__BIG_ENDIAN__)
+else()
+ message(STATUS "LITTLE_ENDIAN")
+ add_compile_definitions(__LITTLE_ENDIAN__)
+endif()
 
 if (NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   message(STATUS "No build type selected, default to Debug")
