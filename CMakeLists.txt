@@ -284,9 +284,9 @@ set(LLVM_INCLUDE_DIR ${CMAKE_CURRENT_BINARY_DIR}/include)
 
 # List of all targets to be built by default:
 set(LLVM_ALL_TARGETS
-  AArch64
+  # AArch64
   # AMDGPU
-  ARM
+  # ARM
   # BPF
   # Hexagon
   # Lanai
@@ -297,7 +297,7 @@ set(LLVM_ALL_TARGETS
   # Sparc
   # SystemZ
   # WebAssembly
-  # X86
+  X86
   # XCore
   )
 
