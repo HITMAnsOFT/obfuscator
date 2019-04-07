@@ -285,20 +285,20 @@ set(LLVM_INCLUDE_DIR ${CMAKE_CURRENT_BINARY_DIR}/include)
 # List of all targets to be built by default:
 set(LLVM_ALL_TARGETS
   AArch64
-  # AMDGPU
+  AMDGPU
   ARM
-  # BPF
-  # Hexagon
-  # Lanai
-  # Mips
-  # MSP430
-  # NVPTX
-  # PowerPC
-  # Sparc
-  # SystemZ
-  # WebAssembly
-  # X86
-  # XCore
+  BPF
+  Hexagon
+  Lanai
+  Mips
+  MSP430
+  NVPTX
+  PowerPC
+  Sparc
+  SystemZ
+  WebAssembly
+  X86
+  XCore
   )
 
 # List of targets with JIT support:
